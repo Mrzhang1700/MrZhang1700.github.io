@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/start-learn/">
+  <link rel="canonical" href="http://yoursite-url/cn/cppcheck-for-vscode-configuration/">
   <title>
     
-      Start Learning Today - either thin | or die
+      cppCheck for vscode configuration - either thin | or die
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -389,11 +389,13 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#others" title="others">others</a>
+              <a class="tag" href="/tags/#c/c++" title="c/c++">c/c++</a>
+              
+              <a class="tag" href="/tags/#cppCheck" title="cppCheck">cppCheck</a>
               
             </div>
-            <h1>Start Learning Today</h1>
-            <h2 class="subheading">learning is always on the way</h2>
+            <h1>cppCheck for vscode configuration</h1>
+            <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Mr.Zhang on
               2023-06-11
@@ -404,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">2</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">348</span> In Total
+              Words <span class="post-count">659</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,49 +473,24 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <blockquote>
-<p>努力把握好每一天，只愿成为更好的自己</p>
+<p>  软件质量是每一个汽车电子软件攻城狮的核心追求，受制于公司流程及相关工具链许可证限制，每次只能在CQ提交之前，才能在服务器端进行动静态测试。遂基于VSCode + cppCheck打造符合MISRA-C-2012的实时工作流就非常有必要了。当然开源工具没有工具链功能安全等相关认证，仅可用于前期规避和辅助Review.</p>
 </blockquote>
-<h2 id="现状">现状</h2>
-<blockquote>
-<p>作为一名机械转码的野生汽车电子攻城狮，工作多年，尽管对ECU开发从底软到BSW、APP都有涉猎，但都不深入。是时候总结一下了。</p>
-</blockquote>
-<h2 id="下一步计划">下一步计划</h2>
-<blockquote>
-<p>借助github page记录自己的学习过程，以备后期查询。</p>
-</blockquote>
-<h2 id="First-Day">First Day</h2>
-<blockquote>
-<p>记录一下github page的搭建方法</p>
-</blockquote>
-<h3 id="基本环境">基本环境</h3>
-<p>git, vscode, github page仓库, ssh配置 等</p>
-<h3 id="安装Node">安装Node</h3>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">cppCheck</a><br>
-验证安装（cmd or powershell）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
-<h3 id="安装npm">安装npm</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<h3 id="安装hexo并配置github仓库">安装hexo并配置github仓库</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>以下命令只能在cmd(win32)运行, powershell貌似不支持</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br><span class="line"></span><br><span class="line">hexo init     <span class="comment">#初始化网站   </span></span><br><span class="line">npm install   </span><br><span class="line">hexo g        <span class="comment">#生成或 hexo generate   </span></span><br><span class="line">hexo s        <span class="comment">#启动本地服务器 或者 hexo server</span></span><br><span class="line"></span><br><span class="line">hexo d 部署到github</span><br><span class="line">hexo new <span class="string">&quot;文章名&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;页面名&quot;</span> <span class="comment">#新建页面  </span></span><br></pre></td></tr></table></figure>
-<p>编辑根目录下_config.yml文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repo: git@github.com:cczeng/cczeng.github.io.git  <span class="comment">#这里的网址填你自己的</span></span><br><span class="line">    branch: master/main <span class="comment">#根据自己的仓库主分支选择main or master</span></span><br></pre></td></tr></table></figure>
-<p>常用简写</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
-<h3 id="更换主题">更换主题</h3>
-<p>到GitHub上搜索hexo主题或者hero自带的主题 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
-<p>找一个喜欢的, 按照各自的主题文档上面一步步操作即可</p>
+<h2 id="cppCheck"><a href="#cppCheck" class="headerlink" title="cppCheck"></a>cppCheck</h2><p><a target="_blank" rel="noopener" href="http://cppcheck.net/">cppCheck</a><br>验证安装（cmd or powershell）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cppcheck --version</span><br></pre></td></tr></table></figure></p>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><p><a target="_blank" rel="noopener" href="https://www.python.org/">python</a><br>验证安装（cmd or powershell）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python --version</span><br></pre></td></tr></table></figure></p>
+<h2 id="VSCode配置"><a href="#VSCode配置" class="headerlink" title="VSCode配置"></a>VSCode配置</h2><p>插件市场安装cpp-check-lint</p>
+<p>settings.json<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">/* cppcheck配置 */</span><br><span class="line"><span class="string">&quot;cpp-check-lint.--enable&quot;</span>: <span class="literal">true</span>,   //启用插件</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--executable&quot;</span>: <span class="string">&quot;C:\\Program Files\\Cppcheck\\cppcheck.exe&quot;</span>,  //cppcheck路径</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cpplint.--enable&quot;</span>: <span class="literal">false</span>, //关闭无用的cpplint</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--inline-suppr&quot;</span>: <span class="literal">false</span>,  //取消内联</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--language=&quot;</span>: <span class="string">&quot;c&quot;</span>, //使用c语言进行检查</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--onsave&quot;</span>: <span class="literal">true</span>, //在文件保存时立刻检查该文件</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--quick_fix&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--std_c=&quot;</span>: <span class="string">&quot;c99&quot;</span>,</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--enable=&quot;</span>: <span class="string">&quot;all&quot;</span>,//输出信息等级，可选all,warning,style,performance,portability,information,unusedFunction</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--customargs=&quot;</span>: <span class="string">&quot;--rule-file=D:\\99_TestProject\\80_CProject\\cppcheckCfg\\rule.xml&quot;</span>, //自定义规则</span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--suppress=&quot;</span>:[ //禁用检查项</span><br><span class="line">  <span class="string">&quot;variableScope&quot;</span>,    //可以减少变量xxx的范围(The scope of the variable <span class="string">&#x27;xxx&#x27;</span> can be reduced.) </span><br><span class="line">  <span class="string">&quot;misra-c2012-2.3&quot;</span>,  //建议 项目不应包含未被使用的类型(<span class="built_in">type</span>)声明</span><br><span class="line">  <span class="string">&quot;misra-c2012-2.4&quot;</span>,  //建议 项目不应包含未被使用的类型标签(tag)声明</span><br><span class="line">  <span class="string">&quot;misra-c2012-2.5&quot;</span>,  //建议 项目不应包含未被使用的宏(macro)声明</span><br><span class="line">  //<span class="string">&quot;misra-c2012-5.4&quot;</span>,  //必要 宏标识符不得重名 c89规定31个字符以内，c99规定63个字符以内</span><br><span class="line">  //<span class="string">&quot;misra-c2012-8.7 : PreDrv_ServiceFunction.c : 26&quot;</span>,//建议 仅在本编译单元中调用的对象和函数，应定义成局部属性</span><br><span class="line">  <span class="string">&quot;misra-c2012-8.9&quot;</span>,  //建议 若一个对象的标识符仅在一个函数中出现，则应将它定义在块范围内</span><br><span class="line">  <span class="string">&quot;misra-c2012-15.4&quot;</span>, //建议 最多只能有一个用于终止循环语句的<span class="built_in">break</span>或goto语句</span><br><span class="line">  <span class="string">&quot;misra-c2012-19.2&quot;</span>, //必要 不得使用union关键字</span><br><span class="line">  <span class="string">&quot;misra-c2012-20.1&quot;</span>, //建议 <span class="comment">#include指令之前仅允许出现预处理指令或注释</span></span><br><span class="line">],</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;cpp-check-lint.cppcheck.--addon=&quot;</span>: [  //插件</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&quot;script&quot;</span>: <span class="string">&quot;misra.py&quot;</span>, </span><br><span class="line">    <span class="string">&quot;args&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;--rule-texts=D:\\99_TestProject\\80_CProject\\cppcheckCfg\\misra_rules_multiple_lines.txt&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;, </span><br><span class="line">],</span><br></pre></td></tr></table></figure></p>
+<p>自定义rule、cfg、平台等配置项，请查阅 <a target="_blank" rel="noopener" href="https://github.com/danmar/cppcheck/tree/main/man">官方手册</a></p>
+<p>配置完成效果如下：<br><img src="cppCheckExample.png" alt="配置完成效果"></p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/cppcheck-for-vscode-configuration/" data-toggle="tooltip" data-placement="top" title="cppCheck for vscode configuration">&larr; Previous Post</a>
-          </li>
           
+          <li class="next">
+            <a href="/cn/start-learn/" data-toggle="tooltip" data-placement="top" title="Start Learning Today">Next Post &rarr;</a>
+          </li>
           
         </ul>
 
@@ -561,7 +538,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Start Learning Today&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/start-learn/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=cppCheck for vscode configuration&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/cppcheck-for-vscode-configuration/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -596,7 +573,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Sun Jun 11 2023 16:32:11 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sun Jun 11 2023 20:19:31 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -649,7 +626,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%8E%B0%E7%8A%B6"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">现状</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5%E8%AE%A1%E5%88%92"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">下一步计划</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#First-Day"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">First Day</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">基本环境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85Node"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">安装Node</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85npm"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">安装npm</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85hexo%E5%B9%B6%E9%85%8D%E7%BD%AEgithub%E4%BB%93%E5%BA%93"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">安装hexo并配置github仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">更换主题</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#cppCheck"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">cppCheck</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#python"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">python</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#VSCode%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">VSCode配置</span></a></li></ol>
         
         </div>
       </aside>
@@ -672,7 +649,9 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#others" title="others">others</a>
+            <a class="tag" href="/tags/#c/c++" title="c/c++">c/c++</a>
+            
+            <a class="tag" href="/tags/#cppCheck" title="cppCheck">cppCheck</a>
             
           </div>
         </section>
