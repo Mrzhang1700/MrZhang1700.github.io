@@ -2,94 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite-url/cn/Labview-Call-C-dll/</loc>
+    <loc>https://mrzhang1700.github.io/cn/cn/Labview-Call-C-dll/</loc>
     
     <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/cppcheck-for-vscode-configuration/</loc>
+    <loc>https://mrzhang1700.github.io/cn/cn/cppcheck-for-vscode-configuration/</loc>
     
     <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/start-learn/</loc>
+    <loc>https://mrzhang1700.github.io/cn/cn/start-learn/</loc>
     
     <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/index.html</loc>
+    <loc>https://mrzhang1700.github.io/cn/tags/index.html</loc>
     
     <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/index.html</loc>
+    <loc>https://mrzhang1700.github.io/cn/categories/index.html</loc>
     
     <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/404.html</loc>
+    <loc>https://mrzhang1700.github.io/cn/404.html</loc>
     
     <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/archive/index.html</loc>
+    <loc>https://mrzhang1700.github.io/cn/about/index.html</loc>
+    
+    <lastmod>2023-06-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mrzhang1700.github.io/cn/archive/index.html</loc>
     
     <lastmod>2017-03-20</lastmod>
     
   </url>
   
-  <url>
-    <loc>http://yoursite-url/about/index.html</loc>
-    
-    <lastmod>2016-04-20</lastmod>
-    
-  </url>
-  
 
   <url>
-    <loc>http://yoursite-url/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://yoursite-url/tags/others/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/tags/others/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/c-c/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/tags/c-c/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/cppCheck/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/tags/cppCheck/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/LabVIEW/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/tags/LabVIEW/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -97,29 +97,29 @@
 
   
   <url>
-    <loc>http://yoursite-url/categories/others/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/categories/others/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/c-c/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/categories/c-c/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/c-c/cppCheck/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/categories/c-c/cppCheck/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/c-c/LabVIEW/</loc>
-    <lastmod>2023-06-11</lastmod>
+    <loc>https://mrzhang1700.github.io/cn/categories/c-c/LabVIEW/</loc>
+    <lastmod>2023-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
