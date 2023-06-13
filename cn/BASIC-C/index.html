@@ -401,11 +401,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">2</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">349</span> In Total
+              Words <span class="post-count">491</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -484,10 +484,23 @@
 <p>嵌入式交叉编译器通常可以配置enum的基本类型,故为了提升代码的可移植性,应遵循MISRA的相关建议,不应依赖于编译器实现.<br>
 <img src="enum_test02.png" alt="ENUM_T02"></p>
 </blockquote>
-<h2 id="float类型中的NaN">float类型中的NaN</h2>
+<h2 id="float类型">float类型</h2>
+<p>浮点类型的实现可能对程序行为产生重大影响，例如：<br>
+◆ 值的范围及其存储的精度；<br>
+◆ 浮点运算后的取整方向；<br>
+◆ 转换为较窄的浮点类型或整数类型时的取整方向；<br>
+◆ 下溢,下溢和非数值存在的行为;(NaNs &lt;-&gt; Not-a-Numbers)<br>
+◆ 库函数的定义域和值域错误的事件的行为</p>
+<h3 id="float中的特殊值及其16进制值">float中的特殊值及其16进制值</h3>
+<p>+0 : 0x00000000<br>
+-0 : 0x80000000<br>
+Infinity :  0x7F800000<br>
+-Infinity : 0xFF800000<br>
+NaN : 0x7F800001~0x7FFFFFFF,0xFF800001~0xFFFFFFFF</p>
 <blockquote>
-<p>待补充</p>
+<p>发现一个关于float类型测试的网站: <a target="_blank" rel="noopener" href="https://www.h-schmidt.net/FloatConverter/IEEE754.html">https://www.h-schmidt.net/FloatConverter/IEEE754.html</a></p>
 </blockquote>
+<p><img src="float_test01.png" alt="FLOAT_T01"></p>
 
 
         <hr>
@@ -543,7 +556,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">测试环境</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%E6%B5%8B%E8%AF%95"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">枚举类型测试</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#float%E7%B1%BB%E5%9E%8B%E4%B8%AD%E7%9A%84NaN"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">float类型中的NaN</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">测试环境</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%E6%B5%8B%E8%AF%95"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">枚举类型测试</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#float%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">float类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float%E4%B8%AD%E7%9A%84%E7%89%B9%E6%AE%8A%E5%80%BC%E5%8F%8A%E5%85%B616%E8%BF%9B%E5%88%B6%E5%80%BC"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">float中的特殊值及其16进制值</span></a></li></ol></li></ol>
         
         </div>
       </aside>
