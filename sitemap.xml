@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mrzhang1700.github.io/cn/cn/BASIC-C/</loc>
+    
+    <lastmod>2023-06-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mrzhang1700.github.io/cn/cn/Labview-Call-C-dll/</loc>
     
     <lastmod>2023-06-11</lastmod>
@@ -60,7 +67,7 @@
 
   <url>
     <loc>https://mrzhang1700.github.io/cn</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,28 +75,35 @@
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/tags/others/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/tags/c-c/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/tags/cppCheck/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/tags/LabVIEW/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrzhang1700.github.io/cn/tags/MISRA/</loc>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -98,28 +112,35 @@
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/categories/others/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/categories/c-c/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/categories/c-c/cppCheck/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mrzhang1700.github.io/cn/categories/c-c/LabVIEW/</loc>
-    <lastmod>2023-06-12</lastmod>
+    <lastmod>2023-06-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrzhang1700.github.io/cn/categories/c-c/MISRA/</loc>
+    <lastmod>2023-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

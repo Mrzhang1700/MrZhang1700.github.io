@@ -134,10 +134,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://mrzhang1700.github.io/cn/archive/">
+  <link rel="canonical" href="https://mrzhang1700.github.io/cn/cn/BASIC-C/">
   <title>
     
-      Archives - either thin | or die
+      C语言基础探究 - either thin | or die
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -234,7 +234,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">HOME</a>
+            <a href="/">首页</a>
           </li>
 
           
@@ -244,7 +244,7 @@
           <li>
             <a href="/tags/">
               
-              TAGS
+              标签
               
               
             </a>
@@ -255,7 +255,7 @@
           <li>
             <a href="/categories/">
               
-              CATEGORIES
+              分类
               
               
             </a>
@@ -266,7 +266,7 @@
           <li>
             <a href="/archive/">
               
-              ARCHIVES
+              归档
               
               
             </a>
@@ -277,7 +277,7 @@
           <li>
             <a href="/about/">
               
-              ABOUT
+              关于
               
               
             </a>
@@ -288,36 +288,14 @@
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span>SEARCH</a>
+              <span class="search-icon"></span>搜索</a>
           </li>
           
 
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="archive/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -369,19 +347,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/archive_bg.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/archive_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/archive_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
       
     }
 
@@ -403,10 +381,38 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>Archives</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">Don&#39;t rush and never settle...... If it&#39;s meant to be, it will be......</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#c/c++" title="c/c++">c/c++</a>
+              
+              <a class="tag" href="/tags/#MISRA" title="MISRA">MISRA</a>
+              
+            </div>
+            <h1>C语言基础探究</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Mr.Zhang on
+              2023-06-13
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">1</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">351</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+
+
           </div>
           
         </div>
@@ -447,263 +453,181 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <blockquote>
+<p>此篇博文用于记录c语言的一些基础特性。</p>
+</blockquote>
+<h2 id="测试环境：">测试环境：</h2>
+<p>gcc version 8.1.0 (x86_64-win32-sjlj-rev0, Built by MinGW-W64 project)</p>
+<h2 id="枚举类型测试：">枚举类型测试：</h2>
+<p>MISRA Rule 10.1 Operands shall not be of an inappropriate essential type</p>
+<blockquote>
+<p>其中关于枚举类型操作数有以下说明:<br>
+枚举型的操作数不应在算术运算中使用，因为枚举对象使用实现定义的整数类型，枚举型是否有符号依赖于编译环境。因此，涉及枚举对象的操作可能会产生意外类型的结果。<br>
+请注意，来自匿名枚举的枚举常量的基本类型为有符号型。</p>
+</blockquote>
+<p>测试过程及结果如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdint.h&gt;</span></span><br><span class="line"></span><br><span class="line">typedef enum _TEST_ENUM_T</span><br><span class="line">&#123;</span><br><span class="line">  TEST_VALUE_DEFAULT = 0,</span><br><span class="line">  TEST_VALUE_0,</span><br><span class="line">  TEST_VALUE_1,</span><br><span class="line">  TEST_VALUE_2,</span><br><span class="line">&#125;</span><br><span class="line">TEST_ENUM_T;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">  TEST_ENUM_T testEnumValue = TEST_VALUE_DEFAULT;</span><br><span class="line">  uint8_t  U8  = 0u;</span><br><span class="line">  uint16_t U16 = 300u;</span><br><span class="line">  uint32_t U32 = 0xFFFFFFFEu;</span><br><span class="line"></span><br><span class="line">  int32_t  I32 = -2;</span><br><span class="line">  int64_t  I64 = INT64_MIN; //-9223372036854775808</span><br><span class="line"></span><br><span class="line">  testEnumValue++;      //testEnumValue is TEST_VALUE_0</span><br><span class="line">  testEnumValue -= 2;   //testEnumValue is 4294967295</span><br><span class="line"></span><br><span class="line">  I32 = testEnumValue;  // I32 is -1</span><br><span class="line">  I32 = -10;</span><br><span class="line">  testEnumValue = I32;  //testEnumValue is 4294967286</span><br><span class="line"></span><br><span class="line">  testEnumValue = I64;  //testEnumValue is TEST_VALUE_DEFAULT</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="enum_test01.png" alt="ENUM_T01"></p>
+<blockquote>
+<p>另关于&quot;匿名枚举的枚举常量的基本类型为有符号型&quot;,暂未想到怎么来测试验证,留后补充.</p>
+</blockquote>
+<p>Note:</p>
+<blockquote>
+<p>嵌入式交叉编译器通常可以配置enum的基本类型,故为了提升代码的可移植性,应遵循MISRA的相关建议,不应依赖于编译器实现.<br>
+<img src="enum_test02.png" alt="ENUM_T02"></p>
+</blockquote>
+<h3 id="float类型中的NaN探究">float类型中的NaN探究</h3>
+<blockquote>
+<p>待补充</p>
+</blockquote>
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
 
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2023">
-          <span class="tag-text">2023</span>
-        </span>
-        <ul>
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <li>
-            06-13
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/BASIC-C/" style="color: #0085a1">
-              <span>
-                C语言基础探究
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
           
-          <li>
-            06-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Labview-Call-C-dll/" style="color: #0085a1">
-              <span>
-                LabVIEW与c通过dll混合编程的一种实现方法
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/cppcheck-for-vscode-configuration/" style="color: #0085a1">
-              <span>
-                cppCheck for vscode configuration
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/start-learn/" style="color: #0085a1">
-              <span>
-                Start Learning Today
-                
-                -- cn
-                
-              </span>
-            </a>
+          <li class="next">
+            <a href="/cn/Labview-Call-C-dll/" data-toggle="tooltip" data-placement="top" title="LabVIEW与c通过dll混合编程的一种实现方法">Next Post &rarr;</a>
           </li>
           
         </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
       </div>
-      
-    </div>
-  </div>
-</div>
 
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
-      <!-- 如果开启评论功能 -->
-      
-      <hr>
-
-      
-
-      
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">测试环境：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%E6%B5%8B%E8%AF%95%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">枚举类型测试：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float%E7%B1%BB%E5%9E%8B%E4%B8%AD%E7%9A%84NaN%E6%8E%A2%E7%A9%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">float类型中的NaN探究</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#c/c++" title="c/c++">c/c++</a>
+            
+            <a class="tag" href="/tags/#MISRA" title="MISRA">MISRA</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#others" title="others" rel="1">others</a>
-    
-    
-    
-    <a href="/tags/#c/c++" title="c/c++" rel="3">c/c++</a>
-    
-    
-    
-    <a href="/tags/#cppCheck" title="cppCheck" rel="1">cppCheck</a>
-    
-    
-    
-    <a href="/tags/#LabVIEW" title="LabVIEW" rel="1">LabVIEW</a>
-    
-    
-    
-    <a href="/tags/#MISRA" title="MISRA" rel="1">MISRA</a>
-    
-    
+        <!-- Friends Blog -->
+        
+      </div>
+    </div>
   </div>
-</section>
+</article>
 
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
 
-    
-    <img id="avatar_pic" src="/img/avatar/keepLearning.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
 
-    
-    <p>Learning, this is in order to meet the better yourself. </p>
-    
+<!-- anchorjs end -->
 
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">RECENT POSTS</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../cn/BASIC-C/">
-      <li>C语言基础探究</li>
-    </a>
-    
-    <a href="../cn/Labview-Call-C-dll/">
-      <li>LabVIEW与c通过dll混合编程的一种实现方法</li>
-    </a>
-    
-    <a href="../cn/cppcheck-for-vscode-configuration/">
-      <li>cppCheck for vscode configuration</li>
-    </a>
-    
-    <a href="../cn/start-learn/">
-      <li>Start Learning Today</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Archives -->
-
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2023/06/">June 2023</a><span class="archive-list-count">4</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#others">
-      <li>others</li>
-    </a>
-    
-    <a href="/categories/#c/c++">
-      <li>c/c++</li>
-    </a>
-    
-    <a href="/categories/#cppCheck">
-      <li>cppCheck</li>
-    </a>
-    
-    <a href="/categories/#LabVIEW">
-      <li>LabVIEW</li>
-    </a>
-    
-    <a href="/categories/#MISRA">
-      <li>MISRA</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
-  </div>
-</div>
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -856,7 +780,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
