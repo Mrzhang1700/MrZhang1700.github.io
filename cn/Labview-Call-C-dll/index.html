@@ -118,6 +118,11 @@
     
 
     
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
   
 
   <!-- Custom Fonts -->
@@ -137,7 +142,7 @@
   <link rel="canonical" href="https://mrzhang1700.github.io/cn/cn/Labview-Call-C-dll/">
   <title>
     
-      LabVIEW与c通过dll混合编程的一种实现方法 - MrZhang1700 Blog
+      其他高级语言与c通过dll混合编程的一种实现方法 - MrZhang1700 Blog
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -388,8 +393,10 @@
               
               <a class="tag" href="/tags/#LabVIEW" title="LabVIEW">LabVIEW</a>
               
+              <a class="tag" href="/tags/#python" title="python">python</a>
+              
             </div>
-            <h1>LabVIEW与c通过dll混合编程的一种实现方法</h1>
+            <h1>其他高级语言与c通过dll混合编程的一种实现方法</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Mr.Zhang on
@@ -405,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">258</span> In Total
+              Words <span class="post-count">332</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -463,11 +470,13 @@
 
         <blockquote>
 <p>此篇博文最早发表于<a target="_blank" rel="noopener" href="https://www.cnblogs.com/MrZhang1700/p/14907319.html">博客园</a>，种种原因，早已不在那边更新了，但此篇有一定价值，遂迁移至此。</p>
-<p>工作需要做某平台产品上位机时，由于系列化原因，部分算法需要根据不同产品系列进行微调，为方便后期可可扩展性，遂将相关算法通过labview读取配置文件调用dll实现。故在此将实现方法记录备用。</p>
+<p><s>工作需要做某平台产品上位机时，由于系列化原因，部分算法需要根据不同产品系列进行微调，为方便后期可可扩展性，遂将相关算法通过LabVIEW读取配置文件调用dll实现。故在此将实现方法记录备用。</s></p>
 </blockquote>
+<p>记录工作中遇到的一些语言之间交互的方法</p>
 <h2 id="开发环境：">开发环境：</h2>
-<p>labview 32bit</p>
 <p>gcc version 8.1.0 (x86_64-win32-sjlj-rev0, Built by MinGW-W64 project)</p>
+<p>labview 32bit</p>
+<p>python 3.11.3</p>
 <h2 id="c语言实现dll库：">c语言实现dll库：</h2>
 <p>参考 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/ser0632/p/4920653.html">https://www.cnblogs.com/ser0632/p/4920653.html</a></p>
 <h3 id="创建dllTest-c文件：">创建dllTest.c文件：</h3>
@@ -476,10 +485,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &quot;stdint.h&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#ifdef BUILD_DLL</span></span><br><span class="line"><span class="comment">#define EXPORT __declspec(dllexport)</span></span><br><span class="line"><span class="comment">#else</span></span><br><span class="line"><span class="comment">#define EXPORT __declspec(dllimport)</span></span><br><span class="line"><span class="comment">#endif</span></span><br><span class="line"></span><br><span class="line">EXPORT void say_hello();</span><br><span class="line">EXPORT uint32_t test_add(uint32_t a, uint32_t b);</span><br></pre></td></tr></table></figure>
 <h3 id="gcc编译为32bit-dll库命令：">gcc编译为32bit dll库命令：</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -m32 -shared -o dllTest.dll dllTest.c</span><br></pre></td></tr></table></figure>
-<h2 id="labview调用dll方法：">labview调用dll方法：</h2>
+<h2 id="LabVIEW调用dll方法：">LabVIEW调用dll方法：</h2>
 <p><img src="LabVIEW_Call_DLL.png" alt="调用"></p>
 <h3 id="运行结果">运行结果</h3>
 <p><img src="LabVIEW_Result.png" alt="结果"></p>
+<h2 id="Python调用dll方法">Python调用dll方法:</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import ctypes</span><br><span class="line"></span><br><span class="line">test_add = ctypes.CDLL(<span class="string">&quot;./dllTest.dll&quot;</span>).test_add</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用ctypes 数据类型，定义函数的参数类与返回值类型</span></span><br><span class="line">test_add.argtypes = [ctypes.c_uint32,ctypes.c_uint32]</span><br><span class="line">test_add.restype = ctypes.c_uint32</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(test_add(3,5))</span><br></pre></td></tr></table></figure>
+<h3 id="运行结果-2">运行结果</h3>
+<p><img src="python_Result.png" alt="结果"></p>
 
 
         <hr>
@@ -519,6 +532,56 @@
         <!-- comments start -->
         <!-- 1. gitalk comment -->
 
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '6e6ef6bd38bd983f8a03',
+      clientSecret: '1bcfc5407f8355407dec3439259719655ec06782',
+      repo: 'Mrzhang1700',
+      owner: 'Mrzhang1700',
+      admin: 'gitalkBlog',
+      id: 'Sun Jun 11 2023 21:32:33 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
 
 <!-- 2. gitment comment -->
 
@@ -539,7 +602,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">开发环境：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0dll%E5%BA%93%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">c语言实现dll库：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BAdllTest-c%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">创建dllTest.c文件：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BAdllTest-h%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">创建dllTest.h文件：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gcc%E7%BC%96%E8%AF%91%E4%B8%BA32bit-dll%E5%BA%93%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">gcc编译为32bit dll库命令：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#labview%E8%B0%83%E7%94%A8dll%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">labview调用dll方法：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">运行结果</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">开发环境：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0dll%E5%BA%93%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">c语言实现dll库：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BAdllTest-c%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">创建dllTest.c文件：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BAdllTest-h%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">创建dllTest.h文件：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gcc%E7%BC%96%E8%AF%91%E4%B8%BA32bit-dll%E5%BA%93%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">gcc编译为32bit dll库命令：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#LabVIEW%E8%B0%83%E7%94%A8dll%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">LabVIEW调用dll方法：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">运行结果</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Python%E8%B0%83%E7%94%A8dll%E6%96%B9%E6%B3%95"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Python调用dll方法:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-2"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">运行结果</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -565,6 +628,8 @@
             <a class="tag" href="/tags/#c/c++" title="c/c++">c/c++</a>
             
             <a class="tag" href="/tags/#LabVIEW" title="LabVIEW">LabVIEW</a>
+            
+            <a class="tag" href="/tags/#python" title="python">python</a>
             
           </div>
         </section>
