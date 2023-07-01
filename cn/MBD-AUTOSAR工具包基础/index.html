@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://mrzhang1700.github.io/cn/cn/VSCode插件开发初探/">
+  <link rel="canonical" href="https://mrzhang1700.github.io/cn/cn/MBD-AUTOSAR工具包基础/">
   <title>
     
-      VSCode插件开发初探 - MrZhang1700 Blog
+      MBD-AUTOSAR工具包基础 - MrZhang1700 Blog
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -389,16 +389,16 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#cppCheck" title="cppCheck">cppCheck</a>
+              <a class="tag" href="/tags/#MBD" title="MBD">MBD</a>
               
-              <a class="tag" href="/tags/#VSCode" title="VSCode">VSCode</a>
+              <a class="tag" href="/tags/#Simulink" title="Simulink">Simulink</a>
               
             </div>
-            <h1>VSCode插件开发初探</h1>
-            <h2 class="subheading"></h2>
+            <h1>MBD-AUTOSAR工具包基础</h1>
+            <h2 class="subheading">Model-Based Design学习笔记系列</h2>
             <span class="meta">
               Posted by Mr.Zhang on
-              2023-06-26
+              2023-07-01
             </span>
 
 
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">420</span> In Total
+              Words <span class="post-count">391</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -466,36 +466,68 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>参照之前我博文 <a href="https://mrzhang1700.github.io/cn/cppcheck-for-vscode-configuration/">cppCheck for vscode configuration</a> 可将cppCheck直接集成到VSCode中，实时检查相关规则，提升软件质量。但在使用中发现，现有版本的cpp-check-lint插件并没有将cppCheck的相关配置项全部开放出来，虽然有—customargs配置项，但当存在多个—customargs配置时，当前版本插件貌似不支持。就萌生了是否能增加的想法。</p>
-<blockquote>
-<p>本文参照 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7010765441144455199">执鸢者</a> 博文进行的实现，由于个人非计算机专业，之前也未写过js，只是微调功能，有疏漏的地方，烦请帮忙指正。</p>
+        <blockquote>
+<p>记录Model-Based Design学习日常</p>
 </blockquote>
-<h1 id="获取插件源码"><a href="#获取插件源码" class="headerlink" title="获取插件源码"></a>获取插件源码</h1><p>从VSCode应用市场可以看到cpp-check-lint的开源协议为MIT，并能找到 <a target="_blank" rel="noopener" href="https://github.com/QiuminGe/cpp-check-lint">QiuminGe</a> 老哥的仓库源码，但看上去很久没有维护了，遂比对了一下其他的Fork分支，发现 <a target="_blank" rel="noopener" href="https://github.com/eBikeLabs/cpp-checker">eBikeLabs</a> 老哥的分支比较贴合我的应用场景，遂基于此分支进行修改。</p>
-<p>Fork一份到自己仓库，然后git clone到本地。</p>
-<h1 id="增加功能"><a href="#增加功能" class="headerlink" title="增加功能"></a>增加功能</h1><p>阅读源码，并添加对应功能。</p>
-<h2 id="增加功能代码"><a href="#增加功能代码" class="headerlink" title="增加功能代码"></a>增加功能代码</h2><p><img src="src_01.png" alt="功能代码"></p>
-<h2 id="增加插件使用规则提示"><a href="#增加插件使用规则提示" class="headerlink" title="增加插件使用规则提示"></a>增加插件使用规则提示</h2><p><img src="src_02.png" alt="规则提示"></p>
-<h2 id="修改打包版本号"><a href="#修改打包版本号" class="headerlink" title="修改打包版本号"></a>修改打包版本号</h2><p><img src="src_03.png" alt="版本号"></p>
-<h2 id="增加版本修订记录"><a href="#增加版本修订记录" class="headerlink" title="增加版本修订记录"></a>增加版本修订记录</h2><p><img src="src_04.png" alt="修订记录"></p>
-<h1 id="插件打包及安装"><a href="#插件打包及安装" class="headerlink" title="插件打包及安装"></a>插件打包及安装</h1><p>由于之前配置博客时已安装npm环境，此处不再赘述，可查阅 <a href="https://mrzhang1700.github.io/cn/start-learn/">Start Learning Today</a> 博文</p>
-<p>安装vsce模块，然后利用vsce进行打包，生成对应的vsix文件，右键vsix文件即可安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i vsce -g</span><br><span class="line">vsce package</span><br></pre></td></tr></table></figure></p>
+<h1>参考资料</h1>
+<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/autosar/ug/configure-client-server-communication.html">Configure AUTOSAR Client-Server Communication</a><br>
+<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/autoMBD">autoMBD</a><br>
+<a target="_blank" rel="noopener" href="https://github.com/TkungAI/AMBD-MC">TkungAI/AMBD-MC</a><br>
+<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ZK4y1E7P5/?buvid=Z741277D00EC96F34F329961071B6A01FC91">永磁同步电机矢量控制详细搭建过程</a></p>
+<h1>AutoSAR工具包示例工程初探</h1>
 <blockquote>
-<p>然后代码提交<a target="_blank" rel="noopener" href="https://github.com/Mrzhang1700/cpp-checker">个人仓库</a>，并pull request <a target="_blank" rel="noopener" href="https://github.com/eBikeLabs/cpp-checker">eBikeLabs</a> 仓库等待审核。</p>
+<p>测试环境: Matlab2023a，其他版本类似<br>
+通过Simulink起始页选择AUTOSAR Blockset中的Software Component即可打开示例模型<br>
+<img src="MBD_001.png" alt="示例模型"><br>
+通过APP -&gt; AUTOSAR Component Designer 即可弹出AUTOSAR快速开始配置页面<br>
+<img src="MBD_002.png" alt="示例模型"><br>
+一路Next即可完成AUTOSAR基本端口映射，通过底部AUTOSAR代码映射组件接口页面可查看相关输入输出和函数配置<br>
+<img src="MBD_003.png" alt="示例模型"><br>
+点击AUTOSAR数据字典即可查看AUTOSAR的Interfaces、R-S Ports…等相关配置<br>
+<img src="MBD_004.png" alt="示例模型"><br>
+点击模型菜单中的快速向导，即可完成代码实例化、目标机器平台等配置，并生成目标平台的代码<br>
+<img src="MBD_005.png" alt="示例模型"><br>
+<img src="MBD_006.png" alt="示例模型"><br>
+<img src="MBD_007.png" alt="示例模型"></p>
 </blockquote>
-<p>文中编译生成的插件已在个人仓库releases，如有需要，可自行下载。<br><img src="src_05.png" alt="releases"></p>
+<h1>基于AutoSAR工具包进行应用开发</h1>
+<p>此处以电子车速里程表基础功能开发来探究MBD,但为了简化模型，不进行车速信号滤波处理</p>
+<h2 id="开发需求">开发需求</h2>
+<p>输入：<br>
+车速信号为 U16 精度: 1/256 km/h<br>
+本次驾驶循环开始时的总计里程值 U32 精度 0.001km<br>
+输出：<br>
+车速表显示值 U8 精度：1km/h<br>
+总计里程值  U32 精度: 0.001 km 范围: 0 - 999999.999km</p>
+<h2 id="模型搭建">模型搭建</h2>
+<p>基于上述AUTOSAR示例模型，修改如下：<br>
+<img src="MBD_101.png" alt="修改模型"><br>
+<img src="MBD_102.png" alt="修改模型"><br>
+<img src="MBD_103.png" alt="修改模型"><br>
+数据类型定义如下：<br>
+<img src="MBD_104.png" alt="修改模型"><br>
+AUTOSAR接口配置如下：<br>
+<img src="MBD_105.png" alt="修改模型"><br>
+<img src="MBD_106.png" alt="修改模型"></p>
+<h2 id="模型测试及代码生成">模型测试及代码生成</h2>
+<p>测试框架如下：<br>
+<img src="MBD_107.png" alt="修改模型"><br>
+<img src="MBD_108.png" alt="修改模型"><br>
+仿真结果如下：<br>
+<img src="MBD_109.png" alt="修改模型"><br>
+<img src="MBD_110.png" alt="修改模型"><br>
+可以看出，模型功能实现符合预期。</p>
+<p>生成代码如下：<br>
+<img src="MBD_111.png" alt="修改模型"></p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/MBD-AUTOSAR工具包基础/" data-toggle="tooltip" data-placement="top" title="MBD-AUTOSAR工具包基础">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/Windows-CMake-Test/" data-toggle="tooltip" data-placement="top" title="Windows平台C/C++开发环境搭建">Next Post &rarr;</a>
+            <a href="/cn/VSCode插件开发初探/" data-toggle="tooltip" data-placement="top" title="VSCode插件开发初探">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -539,7 +571,7 @@
       repo: 'gitalkBlog',
       owner: 'Mrzhang1700',
       admin: 'Mrzhang1700',
-      id: 'Mon Jun 26 2023 21:25:53 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sat Jul 01 2023 10:48:25 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -592,7 +624,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96%E6%8F%92%E4%BB%B6%E6%BA%90%E7%A0%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">获取插件源码</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%A2%9E%E5%8A%A0%E5%8A%9F%E8%83%BD"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">增加功能</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A2%9E%E5%8A%A0%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">增加功能代码</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A2%9E%E5%8A%A0%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E6%8F%90%E7%A4%BA"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">增加插件使用规则提示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E6%89%93%E5%8C%85%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">修改打包版本号</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9C%AC%E4%BF%AE%E8%AE%A2%E8%AE%B0%E5%BD%95"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">增加版本修订记录</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%8F%92%E4%BB%B6%E6%89%93%E5%8C%85%E5%8F%8A%E5%AE%89%E8%A3%85"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">插件打包及安装</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">参考资料</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">AutoSAR工具包示例工程初探</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">基于AutoSAR工具包进行应用开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E9%9C%80%E6%B1%82"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">开发需求</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%90%AD%E5%BB%BA"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">模型搭建</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%B5%8B%E8%AF%95%E5%8F%8A%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">模型测试及代码生成</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -615,9 +647,9 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#cppCheck" title="cppCheck">cppCheck</a>
+            <a class="tag" href="/tags/#MBD" title="MBD">MBD</a>
             
-            <a class="tag" href="/tags/#VSCode" title="VSCode">VSCode</a>
+            <a class="tag" href="/tags/#Simulink" title="Simulink">Simulink</a>
             
           </div>
         </section>
