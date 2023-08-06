@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://mrzhang1700.github.io/cn/tags/">
+  <link rel="canonical" href="https://mrzhang1700.github.io/cn/cn/基于FFT的信号频域分析/">
   <title>
     
-      Tags - MrZhang1700 Blog
+      基于FFT的信号频域分析 - MrZhang1700 Blog
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -239,7 +239,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">HOME</a>
+            <a href="/">首页</a>
           </li>
 
           
@@ -249,7 +249,7 @@
           <li>
             <a href="/tags/">
               
-              TAGS
+              标签
               
               
             </a>
@@ -260,7 +260,7 @@
           <li>
             <a href="/categories/">
               
-              CATEGORIES
+              分类
               
               
             </a>
@@ -271,7 +271,7 @@
           <li>
             <a href="/archive/">
               
-              ARCHIVES
+              归档
               
               
             </a>
@@ -282,7 +282,7 @@
           <li>
             <a href="/about/">
               
-              ABOUT
+              关于
               
               
             </a>
@@ -293,36 +293,14 @@
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span>SEARCH</a>
+              <span class="search-icon"></span>搜索</a>
           </li>
           
 
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="tags/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中�?
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -374,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/tag_bg.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/tag_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/tag_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
       
     }
 
@@ -408,10 +386,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>Tags</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">I don’t know where I am going, but I am on my way......</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#LabVIEW" title="LabVIEW">LabVIEW</a>
+              
+              <a class="tag" href="/tags/#python" title="python">python</a>
+              
+              <a class="tag" href="/tags/#傅里叶变换" title="傅里叶变换">傅里叶变换</a>
+              
+              <a class="tag" href="/tags/#matlab" title="matlab">matlab</a>
+              
+            </div>
+            <h1>基于FFT的信号频域分析</h1>
+            <h2 class="subheading">频谱图</h2>
+            <span class="meta">
+              Posted by Mr.Zhang on
+              2023-08-06
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">6</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+
+
           </div>
           
         </div>
@@ -452,409 +462,246 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <!-- 标签列表 -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-      <!-- 标签云 -->
-      <div id='tag_cloud' class="tags">
+        <blockquote>
+<p>最近工作遇到需要通过对信号频域分析进而确认采样杂波扰动的滤波方案，在此记录一下快速傅里叶变换的几种实现方式。</p>
+</blockquote>
+<h1>参考资料</h1>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/30501507">傅里叶变换基础总结 By 知乎者业</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43537379/article/details/119636757">用python实现FFT，绘制频谱图</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/czyt1988/article/details/84995295">频谱分析-FFT之后的那些事情</a></p>
+<h1>傅里叶变换基础</h1>
+<p><img src="FFT_Base01.png" alt="FFT基础01"><br>
+<img src="FFT_Base02.png" alt="FFT基础02"></p>
+<h1>测试信号说明</h1>
+<p>从现实物理系统中采集的数据是信号的时域表示，但是在时域中很多信息都被隐藏了，当将采样信号变换到频域后，可以提取到很多有用的信息。<br>
+由于工作实际信号不便于展示，此处使用仿真生成波形的时域表示。仿真波形如下：<br>
+y = 5 + 2 * sin(2 * pi * 20 * t) + 3 * sin(2 * pi * 30 * t) + 4 * sin(2 * pi * 40 * t)<br>
+信号采集频率为120Hz(&gt;2倍信号最高频率)<br>
+采样点为1024(采样点为2^n时，有利于计算机进行快速傅里叶计算)</p>
+<h1>matlab实现</h1>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">Fs=120;                               % 采样频率 120 Hz, 大于两倍的最高频率</span><br><span class="line">T=1/Fs;                               % 采样间隔</span><br><span class="line">N=1024;                               % 采样点数</span><br><span class="line">t=(0:1:N-1)*T;                        % 时间序列</span><br><span class="line">t=t<span class="string">&#x27;;                                 % 时间序列转置</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">% time-domain signal</span></span><br><span class="line"><span class="string">y = 5 ...                             % 直流分量</span></span><br><span class="line"><span class="string">    + (2)*sin(2*pi*20*t) ...          % 20 Hz</span></span><br><span class="line"><span class="string">    + (3)*sin(2*pi*30*(t)) ...        % 30 Hz</span></span><br><span class="line"><span class="string">    + (4)*sin(2*pi*40*(t));           % 40 Hz</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">%% 绘制时域信号</span></span><br><span class="line"><span class="string">figure</span></span><br><span class="line"><span class="string">plot(t,y)</span></span><br><span class="line"><span class="string">xlabel(&#x27;</span>时间<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">ylabel(&#x27;</span>信号值<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">title(&#x27;</span>时域信号<span class="string">&#x27;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">%% fft变换</span></span><br><span class="line"><span class="string">Y=fft(y);          % Y为fft变换结果，复数向量</span></span><br><span class="line"><span class="string">Y=Y(1:N/2+1);      % 只看变换结果的一半即可</span></span><br><span class="line"><span class="string">A=abs(Y);          % 复数的幅值（模）</span></span><br><span class="line"><span class="string">f=(0:1:N/2)*Fs/N;  % 生成频率范围</span></span><br><span class="line"><span class="string">f=f&#x27;</span>;              % 转置成列向量</span><br><span class="line"> </span><br><span class="line">%% 幅值修正</span><br><span class="line">A_adj=zeros(N/2+1,1);</span><br><span class="line">A_adj(1)=A(1)/N;        % 频率为0的位置除以N</span><br><span class="line">A_adj(end)=A(end)/N;    % 频率为Fs/2的位置也除以N</span><br><span class="line">A_adj(2:end-1)=2*A(2:end-1)/N;  %其余频率点乘以2/N</span><br><span class="line"> </span><br><span class="line">%% 绘制频率幅值图</span><br><span class="line">figure</span><br><span class="line">subplot(2,1,1)</span><br><span class="line">plot(f,A_adj)</span><br><span class="line">xlabel(<span class="string">&#x27;频率 (Hz)&#x27;</span>)</span><br><span class="line">ylabel(<span class="string">&#x27;幅值 (修正后)&#x27;</span>)</span><br><span class="line">title(<span class="string">&#x27;FFT变换幅值图&#x27;</span>)</span><br><span class="line">grid on</span><br><span class="line"> </span><br><span class="line">%% 绘制频谱相位图</span><br><span class="line">subplot(2,1,2)</span><br><span class="line">phase_angle=angle(Y);   % angle函数的返回结果为弧度</span><br><span class="line">phase_angle=rad2deg(phase_angle);%将弧度转化为度</span><br><span class="line">plot(f,phase_angle)</span><br><span class="line">xlabel(<span class="string">&#x27;频率 (Hz)&#x27;</span>)</span><br><span class="line">ylabel(<span class="string">&#x27;相位角 (degree)&#x27;</span>)</span><br><span class="line">title(<span class="string">&#x27;FFT变换相位图&#x27;</span>)</span><br><span class="line">grid on</span><br></pre></td></tr></table></figure>
+<p><img src="FFT_Matlab.png" alt="matlab结果"></p>
+<h1>python实现</h1>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">from scipy.fftpack import fft,fftshift</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = 1024                        <span class="comment"># 采样点数</span></span><br><span class="line">sample_freq=120                 <span class="comment"># 采样频率 120 Hz, 大于两倍的最高频率</span></span><br><span class="line">sample_interval=1/sample_freq   <span class="comment"># 采样间隔</span></span><br><span class="line">signal_len=N*sample_interval    <span class="comment"># 信号长度</span></span><br><span class="line">t=np.arange(0,signal_len,sample_interval)</span><br><span class="line"></span><br><span class="line">signal = 5 + 2 * np.sin(2 * np.pi * 20 * t) + 3 * np.sin(2 * np.pi * 30 * t) + 4 * np.sin(2 * np.pi * 40 * t)  <span class="comment"># 采集的信号</span></span><br><span class="line"></span><br><span class="line">fft_data = fft(signal)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在python的计算方式中，fft结果的直接取模和真实信号的幅值不一样。</span></span><br><span class="line"><span class="comment"># 对于非直流量的频率，直接取模幅值会扩大N/2倍， 所以需要除了N乘以2。</span></span><br><span class="line"><span class="comment"># 对于直流量的频率(0Hz)，直接取模幅值会扩大N倍，所以需要除了N。</span></span><br><span class="line">fft_amp0 = np.array(np.abs(fft_data)/N*2)   <span class="comment"># 用于计算双边谱</span></span><br><span class="line">fft_amp0[0]=0.5*fft_amp0[0]</span><br><span class="line">N_2 = int(N/2)</span><br><span class="line">fft_amp1 = fft_amp0[0:N_2]  <span class="comment"># 单边谱</span></span><br><span class="line">fft_amp0_shift = fftshift(fft_amp0)    <span class="comment"># 使用fftshift将信号的零频移动到中间</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算频谱的频率轴</span></span><br><span class="line">list0 = np.array(range(0, N))</span><br><span class="line">list1 = np.array(range(0, int(N/2)))</span><br><span class="line">list0_shift = np.array(range(0, N))</span><br><span class="line">freq0 = sample_freq*list0/N        <span class="comment"># 双边谱的频率轴</span></span><br><span class="line">freq1 = sample_freq*list1/N        <span class="comment"># 单边谱的频率轴</span></span><br><span class="line">freq0_shift=sample_freq*list0_shift/N-sample_freq/2  <span class="comment"># 零频移动后的频率轴</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制结果</span></span><br><span class="line">plt.figure()</span><br><span class="line"><span class="comment"># 原信号</span></span><br><span class="line">plt.subplot(221)</span><br><span class="line">plt.plot(t, signal)</span><br><span class="line">plt.title(<span class="string">&#x27; Original signal&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;t (s)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27; Amplitude &#x27;</span>)</span><br><span class="line"><span class="comment"># 双边谱</span></span><br><span class="line">plt.subplot(222)</span><br><span class="line">plt.plot(freq0, fft_amp0)</span><br><span class="line">plt.title(<span class="string">&#x27; spectrum two-sided&#x27;</span>)</span><br><span class="line">plt.ylim(0, 6)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;frequency  (Hz)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27; Amplitude &#x27;</span>)</span><br><span class="line"><span class="comment"># 单边谱</span></span><br><span class="line">plt.subplot(223)</span><br><span class="line">plt.plot(freq1, fft_amp1)</span><br><span class="line">plt.title(<span class="string">&#x27; spectrum single-sided&#x27;</span>)</span><br><span class="line">plt.ylim(0, 6)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;frequency  (Hz)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27; Amplitude &#x27;</span>)</span><br><span class="line"><span class="comment"># 移动零频后的双边谱</span></span><br><span class="line">plt.subplot(224)</span><br><span class="line">plt.plot(freq0_shift, fft_amp0_shift)</span><br><span class="line">plt.title(<span class="string">&#x27; spectrum two-sided shifted&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;frequency  (Hz)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27; Amplitude &#x27;</span>)</span><br><span class="line">plt.ylim(0, 6)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="FFT_Python.png" alt="python结果"></p>
+<h1>LabVIEW实现</h1>
+<p><img src="FFT_LabVIEW01.png" alt="LabVIEW"><br>
+<img src="FFT_LabVIEW02.png" alt="LabVIEW结果"></p>
+<h1>结果分析</h1>
+<h2 id="概要">概要</h2>
+<p>设定的原信号的频率分量分别有 直流量(0Hz，幅值为5)，20Hz (幅值为2)，30Hz(幅值为3)，40Hz(幅值为4)，采样点数N为1024，采样频率Fs为120Hz<br>
+计算可知, 频率分辨率为120/1024, 信号长度L=N/Fs = 1024/120</p>
+<h2 id="关于频谱泄露的考虑">关于频谱泄露的考虑:</h2>
+<p>20Hz ，30Hz，40Hz 分量对应的周期为1/20(s),1/30(s),1/40(s),信号长度L = 1024/120 能被30Hz对应的周期(1/30)整除，因此，频谱图上30Hz对应的幅值都是准确的，但是信号长度L不能被20Hz和40Hz对应的周期整除，出现了频谱泄露，因此幅值则略有偏差。从图上也可以看到，20Hz和40Hz对应的峰的底部有一定的宽度。</p>
+<p>保持其他输入不变，将采样点更改为1200，则可以看到20Hz,30Hz,40Hz的幅值也是准确的。</p>
+<blockquote>
+<p>基于此，采集前别乱选采样率，要对采集的信号有一定的了解，确定大致感兴趣的频率段，频谱分析的频率范围是[0~Fs/2]，也就是采样率的一半是你频谱的极限。<br>
+别瞎选，以前就看过不懂采集时选了一个最大的采样率，结果得出来的频谱质量非常差。</p>
+</blockquote>
+<h2 id="待优化项">待优化项</h2>
+<p>LabVIEW的频谱测量功能得到到直流分量偏大，暂未找到原因，待后续进一步探究</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/FOC控制基础/" data-toggle="tooltip" data-placement="top" title="FOC控制基础">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
         
-        <a href="#others" title="others" rel="1">others</a>
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
         
-        <a href="#c/c++" title="c/c++" rel="4">c/c++</a>
+
         
-        <a href="#cppCheck" title="cppCheck" rel="2">cppCheck</a>
-        
-        <a href="#LabVIEW" title="LabVIEW" rel="2">LabVIEW</a>
-        
-        <a href="#MISRA" title="MISRA" rel="1">MISRA</a>
-        
-        <a href="#python" title="python" rel="2">python</a>
-        
-        <a href="#VSCode" title="VSCode" rel="1">VSCode</a>
-        
-        <a href="#MBD" title="MBD" rel="2">MBD</a>
-        
-        <a href="#Simulink" title="Simulink" rel="2">Simulink</a>
-        
-        <a href="#傅里叶变换" title="傅里叶变换" rel="1">傅里叶变换</a>
-        
-        <a href="#matlab" title="matlab" rel="1">matlab</a>
-        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'f60cfb364f2af5bf36ca',
+      clientSecret: '4e8902f80379f80e267e2c35827b26d8ce3de5f2',
+      repo: 'gitalkBlog',
+      owner: 'Mrzhang1700',
+      admin: 'Mrzhang1700',
+      id: 'Sun Aug 06 2023 08:42:09 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://hello-world-calm-lab-8f10.ms-zhang1.workers.dev/?https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
       </div>
 
-      <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="others">
-          <span class="tag-text">others</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/start-learn/">
-            <h2 class="post-title">
-              Start Learning Today
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              learning is always on the way
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="c/c++">
-          <span class="tag-text">c/c++</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/cppcheck-for-vscode-configuration/">
-            <h2 class="post-title">
-              cppCheck for vscode configuration
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/Labview-Call-C-dll/">
-            <h2 class="post-title">
-              其他高级语言与c通过dll混合编程的一种实现方法
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/BASIC-C/">
-            <h2 class="post-title">
-              C语言基础
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/Windows-CMake-Test/">
-            <h2 class="post-title">
-              Windows平台C/C++开发环境搭建
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              配置VSCode、CMake、GCC开发环境
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="cppCheck">
-          <span class="tag-text">cppCheck</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/cppcheck-for-vscode-configuration/">
-            <h2 class="post-title">
-              cppCheck for vscode configuration
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/VSCode插件开发初探/">
-            <h2 class="post-title">
-              VSCode插件开发初探
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="LabVIEW">
-          <span class="tag-text">LabVIEW</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/Labview-Call-C-dll/">
-            <h2 class="post-title">
-              其他高级语言与c通过dll混合编程的一种实现方法
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/基于FFT的信号频域分析/">
-            <h2 class="post-title">
-              基于FFT的信号频域分析
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              频谱图
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="MISRA">
-          <span class="tag-text">MISRA</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/BASIC-C/">
-            <h2 class="post-title">
-              C语言基础
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="python">
-          <span class="tag-text">python</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/Labview-Call-C-dll/">
-            <h2 class="post-title">
-              其他高级语言与c通过dll混合编程的一种实现方法
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/基于FFT的信号频域分析/">
-            <h2 class="post-title">
-              基于FFT的信号频域分析
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              频谱图
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="VSCode">
-          <span class="tag-text">VSCode</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/VSCode插件开发初探/">
-            <h2 class="post-title">
-              VSCode插件开发初探
-              
-              -- cn
-              
-            </h2>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="MBD">
-          <span class="tag-text">MBD</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/MBD-AUTOSAR工具包基础/">
-            <h2 class="post-title">
-              MBD-AUTOSAR工具包基础
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              Model-Based Design学习笔记系列
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/FOC控制基础/">
-            <h2 class="post-title">
-              FOC控制基础
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              Model-Based Design学习笔记系列
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Simulink">
-          <span class="tag-text">Simulink</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/MBD-AUTOSAR工具包基础/">
-            <h2 class="post-title">
-              MBD-AUTOSAR工具包基础
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              Model-Based Design学习笔记系列
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-        <div class="post-preview">
-          <a href="/cn/FOC控制基础/">
-            <h2 class="post-title">
-              FOC控制基础
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              Model-Based Design学习笔记系列
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="傅里叶变换">
-          <span class="tag-text">傅里叶变换</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/基于FFT的信号频域分析/">
-            <h2 class="post-title">
-              基于FFT的信号频域分析
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              频谱图
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="matlab">
-          <span class="tag-text">matlab</span>
-        </span>
-        
-        <div class="post-preview">
-          <a href="/cn/基于FFT的信号频域分析/">
-            <h2 class="post-title">
-              基于FFT的信号频域分析
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              频谱图
-            </h3>
-            
-          </a>
-        </div>
-        <hr>
-        
-      </div>
-      
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">参考资料</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">傅里叶变换基础</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">测试信号说明</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">matlab实现</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">python实现</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">LabVIEW实现</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">结果分析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%A6%81"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">概要</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B3%E4%BA%8E%E9%A2%91%E8%B0%B1%E6%B3%84%E9%9C%B2%E7%9A%84%E8%80%83%E8%99%91"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">关于频谱泄露的考虑:</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BE%85%E4%BC%98%E5%8C%96%E9%A1%B9"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">待优化项</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#LabVIEW" title="LabVIEW">LabVIEW</a>
+            
+            <a class="tag" href="/tags/#python" title="python">python</a>
+            
+            <a class="tag" href="/tags/#傅里叶变换" title="傅里叶变换">傅里叶变换</a>
+            
+            <a class="tag" href="/tags/#matlab" title="matlab">matlab</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+      </div>
     </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -1007,7 +854,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
