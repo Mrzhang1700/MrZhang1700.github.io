@@ -488,17 +488,10 @@
     <div class="post-content-preview">
       
 最近工作遇到需要通过对信号频域分析进而确认采样杂波扰动的滤波方案，在此记录一下快速傅里叶变换的几种实现方式。
+参考资料傅里叶变换基础总结用python实现FFT，绘制频谱图频谱分析-FFT之后的那些事情傅里叶分析之掐死教程（完整版）
 
-参考资料
-傅里叶变换基础总结
-用python实现FFT，绘制频谱图
-频谱分析-FFT之后的那些事情
-傅里叶分析之掐死教程（完整版）
 傅里叶变换基础
-
-
-测试信号说明
-从现实物理系统中采集的数据是信号的时域表示，但是在时域中很多信息都被隐藏了，当将采样信号变换到频域后，可以提取到很......
+测试信号说明从现实物理系统中采集的数据是信号的时域表示，但是在时域中很多信息都被隐藏了，当将采样信号变换到频域后，可以提取到很多有用的信息。......
     </div>
   </a>
   
@@ -1560,20 +1553,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
